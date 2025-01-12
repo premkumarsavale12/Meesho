@@ -1,0 +1,515 @@
+body {
+      margin: 0;
+     padding: 0;
+     width: 100%; 
+     color: var(--textColor);
+}
+
+:root {
+     --hoverTextColor: rgb(204, 19, 127);
+     --textColor: rgb(87, 85, 85);
+}
+
+* {
+      box-sizing: border-box; 
+}
+
+.header {
+     height: 70px;
+     /* background-color:gray ; */
+     outline: 1px solid red;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-weight: 470;
+}
+
+.headerleft,
+.headerright {
+     display: flex;
+     margin-inline: 30px;
+     align-items: center;
+}
+
+.logocontainer img {
+     width: 140px;
+     margin-top: 12px;
+     margin-left: 15px;
+
+}
+
+.searchicon img {
+     width: 20px;
+
+}
+
+.searchinputcontainer {
+     width: 400px;
+     height: 45px;
+     outline: 1px solid rgb(126, 126, 126);
+     display: flex;
+     margin-left: 25px;
+     border-radius: 3px;
+     align-items: center;
+     position: relative;
+     padding: 9px;
+
+}
+
+.inputsearch {
+     width: 100%;
+     border: none;
+     outline: none;
+     font-size: 15px;
+}
+
+form {
+     width: 100%;
+}
+
+#closesearch {
+     display: none;
+}
+
+.searchrecentmodel {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     top: 45px;
+     background-color: white;
+     height: 400px;
+     width: 100%;
+     display: none;
+     padding: 10px;
+     box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+     z-index: 3;
+}
+
+.searchinputcontainer:focus-within .searchrecentmodel {
+     display: block;
+     background-color: white;
+
+}
+
+.recenticon img {
+     width: 20px;
+     margin-right: 10px;
+}
+
+.recentitem {
+     display: flex;
+     align-items: center;
+
+}
+
+/*  right side */
+.mobileicon img {
+     width: 20px;
+     margin: 5px;
+}
+
+.downloadcontainer {
+     display: flex;
+     align-items: center;
+     margin-right: 10px;
+ 
+     height: 100%;
+     padding-right: 20px;
+     position: relative;
+}
+
+.downloadcontainer:hover {
+     color: rgb(204, 19, 127);
+     cursor: pointer;
+}
+
+.downloadContainer:hover {
+     color: var(--hoverTextColor);
+     cursor: pointer;
+}
+
+.downloadcontainer p {
+     margin: 0;
+     padding: 0;
+     font-size: 16px;
+}
+
+.profileandcart {
+     display: flex;
+     align-items: center;
+}
+
+.profileicon,
+.profileandcart p {
+     margin: 0;
+     padding: 0;
+}
+
+.profilecontainer {
+     margin-inline: 5px;
+     padding-left: 20px;
+
+}
+
+.profileicon img {
+     width: 20px;
+     margin-top: 20px;
+}
+
+.pro {
+     margin-top: -5px;
+}
+
+.carticon img {
+     width: 20px;
+     margin-top: 20px;
+
+}
+
+.cart {
+     margin-top: -5px;
+     padding-left: 5px;
+}
+
+.cartcontainer .cartcontainer {
+     padding: 0px 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-left: 5px;
+}
+
+
+
+.becomesuppliercontainer {
+     padding: 0px 20px;
+     margin-top: 8px;
+     border-left: 1px solid #ccc;
+     border-right: 1px solid #ccc;
+     font-size: 18px;
+}
+
+.dowloadbtn img {
+     width: 140px;
+     display: block;
+     margin-top: -10px;
+
+}
+
+.dowloadbtn {
+     margin-inline: 8px;
+     width: 200px;
+}
+
+.dowloadhoverbtncontainer {
+     position: absolute;
+     bottom: 0;
+     top: 36px;
+     /* box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3); */
+     display: none;
+     width: 120%;
+     height: 200px;
+     padding: 10px;
+     margin-left: -20px;
+     background-color: #fff;
+}
+
+.downloadcontainer:hover .dowloadhoverbtncontainer,
+.downloadcontainer:focus .dowloadhoverbtncontainer {
+     display: block;
+
+}
+
+.dowloadhoverbtncontainer h4 {
+     font-size: 17px;
+}
+
+/*  nav baar css */
+nav {
+     width: 100%;
+     border-bottom: 1px solid gray;
+     height: 50px;
+}
+
+nav ul {
+     list-style: none;
+
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0px 10px;
+
+     height: 100%;
+     margin: 0;
+
+}
+
+nav ul li {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     margin: 0;
+     /* background-color: red; */
+      border-bottom: 3px solid transparent; 
+     cursor: pointer;
+
+}
+
+nav ul li:hover {
+     border-color: var(--hoverTextColor);
+
+}
+
+/*  submenu */
+.submenu {
+     position: absolute;
+     width: 100%;
+     background-color: #ccc;
+     border: 1px solid #ccc;
+     box-sizing: border-box;
+     /* height: 400px; */
+     padding: 20px;
+     top: 19%;
+     left: 0;
+     right: 0;
+     margin: 0px 10px;
+     /* background-color: red; */
+
+     display: none;
+
+}
+
+nav ul li:hover .submenu {
+     display: block;
+}
+
+.submenu p {
+     color: var(--TextColor);
+}
+
+.submenulist {
+     display: flex;
+
+}
+
+.column {
+     padding: 30px;
+}
+
+/*********        lowestprice ******** */
+.lowestpricesContainer {
+     margin: 50px auto;
+     display: flex;
+     max-width: 1000px;
+     background-color: white;
+
+}
+
+.lowestprice_text {
+     width: 60%;
+     padding: 25px 0 0 25px;
+}
+
+.lowestpriceway {
+     display: flex;
+     height: 80px;
+     margin-top: 20px 0;
+
+}
+
+.lowestprice_icon img {}
+
+.lowestpriceitem {
+     width: 50%;
+
+     border-right: 2px solid #ccc;
+
+}
+
+.lowestpriceitem p {
+     padding: 10px;
+}
+
+.lowestprice_image {
+     width: 50%;
+}
+
+.lowestpricesContainer h1 {
+     font-size: 40px;
+     color: black;
+
+}
+
+.dowloadapp_container{
+     display: flex;
+     height: 50px;
+     align-items: center;
+     font-size: 20px;
+margin-top: 30px;
+background-color:rgb(204, 19, 127);
+border: none;
+outline: none;
+border-radius: 5px;
+
+}
+
+.dowloadapp_container p {
+ padding: 0px 20px;    
+}
+.topcategoriesfrom{
+      width: 1100px;
+      margin: auto;
+}
+.topcategoriesHeading{
+      display: flex;
+      align-items: center;
+}
+.horizontalline{
+     padding: 1px;
+     background-color: rgb(204, 19, 127);
+     width: 50%;
+}
+.topcategoriesHeading h1{
+     width: max-content;
+     width: 1050px;
+     color: rgb(8,8,8);
+     font-size: 38px;
+     margin: 0;
+}
+.tocategoriesimage{
+     width: 100%;
+     height: 500px;
+     background-image: url("https://images.meesho.com/images/marketing/1649759774600.jpg");
+     background-repeat: no-repeat;
+     margin-top: 50px;
+     display: flex;
+     align-items: flex-end;
+}
+.topcategoreisimage img{
+     max-width: 300px;
+     margin: 10px;
+     bottom: 0;
+ }
+ .topcategoreisimage img:first-child{
+     max-width: 400px;
+ }
+ .essentialContaienr{
+     width: 100%;
+     height: 500px;
+     background-color: 400px;
+     margin-top: 50px;
+     background-image: url("https://images.meesho.com/images/marketing/1664343269674.jpg");
+     background-repeat: no-repeat;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .essentialContaienr img{
+     max-width: 180px;
+ }
+ 
+ 
+ .essential_item{
+     max-width: 250px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .essen-btn{
+     margin-left: 100px;
+     margin-top: 20px    ;
+ }
+
+
+
+ /********************************becomesellerBanner_Container*******************/
+.becomesellerBanner_Container{
+     margin: 50px 0px;
+     position: relative;
+ 
+ }
+ .becomesellerBanner_Container img{
+     width: 100%;
+ }
+ .becomeSeller_Content{
+     position: absolute;
+     top:0;
+     right: 0;
+     width: 100%;
+     padding: 40px 0px;
+ }
+ .becomeSeller_content_content{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+ }
+ .becomerSeller_appDownload{
+     position: relative;
+     width: 150px;
+     height: 50px;
+     background-color: black;
+     margin: 10px;
+     padding: 5px;
+     border-radius: 5px;
+ }
+ .becomerSeller_appDownload img{
+     width: 100%;
+     height: 100%;
+     background-color: black;
+ }
+ .becomeSeller_content_content h2{
+     color:rgb(85, 133, 248) ;
+     font-size: 30px;
+     margin-bottom: 0;
+ }
+ .becomeSeller_content_content h1{
+     color: var(--hoverTextColor);
+     font-size: 50px;
+     width: 60%;
+     text-align: right;
+ }
+ .becomerSeller_appDownload_container{
+     display: flex;
+ }
+ .meeesho_benifit_image{
+     width: 20px;
+     margin-right: 10px;
+ }
+ .meesho_supper_benifit{
+     display: flex;
+     align-items: center;
+     padding: 0px 40px;
+     border-right: 2px solid white;
+     height: 25px;
+ }
+ .meesho_supper_benifit:first-child{
+     padding: 0;
+     padding-right: 40px;
+ }
+ .meesho-suppliear_benifit_container{
+     display: flex;
+     align-items: center;
+     margin: 40px 0px;
+ }
+ .meesho_supper_container{
+     position: relative;
+     margin-left: 150px;
+ }
+ .meesho_supper_container_content{
+     position: absolute;
+     top: 0;
+     padding: 20px 30px;
+     color:white;
+ }
+ 
+ .signup_btn_now{
+     background-color: white;
+     color:var(--hoverTextColor);
+     font-size: 20px;
+     font-weight: bold;
+     padding: 15px 20px;
+     box-sizing: border-box;
+     text-decoration: none;
+     border-radius: 5px;
+ }
